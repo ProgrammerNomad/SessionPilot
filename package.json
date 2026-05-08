@@ -1,0 +1,25 @@
+{
+    "name": "sessionpilot",
+    "version": "1.0.0",
+    "description": "Open-source session & activity monitoring for logged-in WordPress users",
+    "author": "Shiv Singh <shiv@srapsware.com> (https://github.com/ProgrammerNomad)",
+    "homepage": "https://github.com/ProgrammerNomad/SessionPilot",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "lint": "eslint resources/js"
+    },
+    "devDependencies": {
+        "vite": "^5.0",
+        "@vitejs/plugin-legacy": "^5.0",
+        "eslint": "^9.0",
+        "vitest": "^1.0",
+        "autoprefixer": "^10.4",
+        "postcss": "^8.4"
+    },
+    "dependencies": {
+        "alpinejs": "^3.13",
+        "htmx.org": "^1.9"
+    }
+}

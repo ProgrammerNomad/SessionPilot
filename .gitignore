@@ -1,0 +1,33 @@
+# PHP dependencies
+/vendor/
+
+# Node dependencies
+/node_modules/
+
+# Compiled assets manifest (committed, so excluded only if regenerated)
+# public/.vite/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+/storage/logs/
+
+# Build caches
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitkeep
+
+# Composer lock is committed, npm lock too
+# composer.lock — keep
+# package-lock.json — keep
