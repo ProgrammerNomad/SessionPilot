@@ -5,7 +5,7 @@
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/gpl-2.0)
 [![WordPress: 6.4+](https://img.shields.io/badge/WordPress-6.4%2B-21759B)](https://wordpress.org)
-[![PHP: 8.1+](https://img.shields.io/badge/PHP-8.1%2B-777BB4)](https://php.net)
+[![PHP: 8.2+](https://img.shields.io/badge/PHP-8.2%2B-777BB4)](https://php.net)
 
 ---
 
@@ -59,20 +59,28 @@ Most competitors split these features across multiple paid plans. SessionPilot s
 | Requirement | Minimum | Recommended |
 |---|---|---|
 | WordPress | 6.4 | Latest |
-| PHP | 8.1 | 8.3 |
-| MySQL | 8.0 | Latest |
-| MariaDB | 10.6 | Latest |
+| PHP | 8.2 | 8.3 |
+| MySQL | 5.7 | Latest |
+| MariaDB | 10.3 | Latest |
 
 ---
 
 ## Installation
+
+### From ZIP (Recommended)
+
+1. Download `sessionpilot-1.0.0.zip` from the [Releases page](https://github.com/ProgrammerNomad/SessionPilot/releases)
+2. In WordPress admin, go to **Plugins → Add New → Upload Plugin**
+3. Upload the ZIP and click **Install Now**
+4. Click **Activate Plugin**
+5. Navigate to **SessionPilot** in the left menu
 
 ### From Source (Development)
 
 1. **Clone the repository** into your WordPress plugins directory:
 
 ```bash
-git clone https://github.com/your-org/sessionpilot.git wp-content/plugins/sessionpilot
+git clone https://github.com/ProgrammerNomad/SessionPilot.git wp-content/plugins/sessionpilot
 cd wp-content/plugins/sessionpilot
 ```
 
