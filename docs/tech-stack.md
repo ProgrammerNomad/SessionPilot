@@ -25,16 +25,15 @@ All of this while remaining fully WordPress-native with no external server requi
 
 | Version | Status |
 |---|---|
-| PHP 8.1 | Minimum supported |
-| PHP 8.2 | Recommended |
+| PHP 8.2 | Minimum supported |
 | PHP 8.3 | Preferred |
 
 ### Database
 
 | Engine | Status |
 |---|---|
-| MySQL 8.0+ | Fully supported |
-| MariaDB 10.6+ | Fully supported |
+| MySQL 5.7+ | Fully supported |
+| MariaDB 10.3+ | Fully supported |
 | SQLite | Avoid as primary dependency |
 
 ### Eloquent ORM

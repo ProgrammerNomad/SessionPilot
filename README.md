@@ -11,7 +11,7 @@
 
 ## What is SessionPilot?
 
-SessionPilot is a WordPress plugin that gives site admins complete visibility and control over logged-in user sessions. It replaces a combination of 2–3 paid plugins with one unified, fully free tool.
+SessionPilot is a WordPress plugin that gives site admins complete visibility and control over logged-in user sessions. It replaces a combination of 2-3 paid plugins with one unified, fully free tool.
 
 **It is NOT** an analytics platform, visitor tracker, or security scanner. It tracks only authenticated (logged-in) WordPress users.
 
@@ -49,7 +49,7 @@ Most competitors split these features across multiple paid plans. SessionPilot s
 | Idle timeout -Inactive Logout Pro ($39/yr) | ✅ Free |
 | Real-time active users -WP Activity Log Premium | ✅ Free |
 | CSV export -Simple History Premium ($49/yr) | ✅ Free |
-| Per-user session overrides -Loggedin add-ons ($29–$49) | ✅ Free |
+| Per-user session overrides -Loggedin add-ons ($29-$49) | ✅ Free |
 | REST API -no competitor offers this | ✅ Free |
 
 ---
@@ -216,6 +216,6 @@ No Pro version. No license keys. No cloud dependency. Everything is free, foreve
 
 ## Philosophy
 
-> "SessionPilot does in one free plugin what competitors charge $50–$150/year for across multiple paid products."
+> "SessionPilot does in one free plugin what competitors charge $50-$150/year for across multiple paid products."
 
 Built for WordPress admins and agencies who want full control over their users' sessions -locally, privately, and without vendor lock-in.

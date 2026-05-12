@@ -9,7 +9,7 @@
 | Node.js | 20+ |
 | npm | 10+ |
 | WordPress | 6.4+ |
-| MySQL / MariaDB | 8.0+ / 10.6+ |
+| MySQL / MariaDB | 5.7+ / 10.3+ |
 
 ---
 
@@ -18,8 +18,8 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-org/sessionpilot.git
-cd sessionpilot
+git clone https://github.com/ProgrammerNomad/SessionPilot.git
+cd SessionPilot
 ```
 
 ### 2. Install PHP Dependencies

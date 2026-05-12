@@ -13,7 +13,7 @@ This document inventories the main WordPress session management and activity log
 | [WP Security Audit Log](https://wordpress.org/plugins/wp-security-audit-log/) | Melapress | 300,000+ | Active |
 | [Simple History](https://wordpress.org/plugins/simple-history/) | Pär Thernström | 300,000+ | Active |
 | [WPForce Logout](https://wordpress.org/plugins/wp-force-logout/) | MiniPlugins | 8,000+ | Active |
-| [Loggedin – Limit Concurrent Sessions](https://wordpress.org/plugins/loggedin/) | Duck Dev | 8,000+ | Active |
+| [Loggedin - Limit Concurrent Sessions](https://wordpress.org/plugins/loggedin/) | Duck Dev | 8,000+ | Active |
 | [Sessions](https://wordpress.org/plugins/sessions/) | PerfOps | 900+ | Active |
 | [SessionQuota](https://wordpress.org/plugins/sessionquota/) | HandyPlugins | <10 | Active |
 | [Activity Log for WordPress (WinterLock)](https://wordpress.org/plugins/winterlock/) | activity-log.com | 60+ | Active |
@@ -47,9 +47,9 @@ This document inventories the main WordPress session management and activity log
 | Plugin | Free Tier | Paid Tier |
 |---|---|---|
 | WP Security Audit Log | Basic logging only | ~$149+/year |
-| Simple History | Basic logging | $49–$99/year |
+| Simple History | Basic logging | $49-$99/year |
 | WPForce Logout | Core force-logout | ~$20 (one-time) |
-| Loggedin | Global limit only | Add-ons $29–$49 each |
+| Loggedin | Global limit only | Add-ons $29-$49 each |
 | Sessions | Full (no paid version) | Free |
 | SessionQuota | Global limit only | $49/$99 |
 | WinterLock | Basic logging | Contact for quote |
@@ -70,7 +70,7 @@ Loggedin requires paid add-ons for per-user overrides. SessionQuota restricts pe
 
 ### Gap 3: Real-Time Dashboard + Session Control + Audit Log in One Plugin
 
-Currently, a site owner needs to install at least 2–3 plugins to cover:
+Currently, a site owner needs to install at least 2-3 plugins to cover:
 - Activity logging (WP Activity Log or Simple History)
 - Session control (WPForce Logout or Loggedin)
 - Live user monitoring (Sessions plugin)
@@ -89,4 +89,4 @@ Only the Sessions plugin provides CLI commands in its free version. SessionPilot
 
 ## Positioning
 
-> "SessionPilot does in one free plugin what competitors charge $50–$150/year for across multiple paid products."
+> "SessionPilot does in one free plugin what competitors charge $50-$150/year for across multiple paid products."
