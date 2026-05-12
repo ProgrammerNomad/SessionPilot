@@ -81,7 +81,7 @@ class SessionService
     }
 
     /**
-     * WordPress heartbeat — update last_activity for the current session.
+     * WordPress heartbeat -update last_activity for the current session.
      */
     public function onHeartbeat(array $response, array $data): array
     {

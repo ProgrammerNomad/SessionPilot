@@ -88,7 +88,7 @@ Implement using WordPress transients as a lightweight counter store.
 ### Session Token Integrity
 
 - Use `WP_Session_Tokens` to track and invalidate sessions
-- Never store session tokens in custom tables — reference them by ID only
+- Never store session tokens in custom tables -reference them by ID only
 - Implement session fixation protection by regenerating tokens on privilege changes
 
 ### Idle Timeout
@@ -130,7 +130,7 @@ Browser-close logout is a **best-effort convenience feature**, not a security co
 
 ## Session Hijacking Prevention
 
-- **Token invalidation:** When a session is force-logged-out, the corresponding `WP_Session_Tokens` entry is destroyed immediately — not just marked in the SessionPilot table.
+- **Token invalidation:** When a session is force-logged-out, the corresponding `WP_Session_Tokens` entry is destroyed immediately -not just marked in the SessionPilot table.
 - **Privilege escalation:** If a user's role is elevated, regenerate their session token to prevent fixation attacks.
 - **Secure cookies:** WordPress's own `SECURE_AUTH_COOKIE` / `AUTH_COOKIE` with `HttpOnly` and `SameSite=Lax` attributes are respected. Do not bypass or duplicate WP's cookie handling.
 
@@ -151,7 +151,7 @@ Browser-close logout is a **best-effort convenience feature**, not a security co
 
 - The `.mmdb` database file must be updated monthly (MaxMind license requirement)
 - Old database files must be deleted within 30 days of receiving a new version
-- Never send IPs to the MaxMind API — use the local file lookup only
+- Never send IPs to the MaxMind API -use the local file lookup only
 
 ---
 
@@ -159,7 +159,7 @@ Browser-close logout is a **best-effort convenience feature**, not a security co
 
 - **No data leaves the server.** All SessionPilot data is stored in the local WordPress database.
 - **IP anonymization** available out of the box (last octet masked by default).
-- **Auto-purge** removes old data automatically — sensitive data does not accumulate indefinitely.
+- **Auto-purge** removes old data automatically -sensitive data does not accumulate indefinitely.
 - Sensitive fields (full IPs, user agents) can be individually disabled in settings.
 - **No telemetry.** SessionPilot never phones home, checks for updates via external servers, or sends usage statistics.
 

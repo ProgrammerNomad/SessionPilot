@@ -24,11 +24,11 @@ SessionPilot should feel like a **modern SaaS product** inside `wp-admin`.
 
 ## Design Principles
 
-1. **Fast** — Pages load instantly. No spinner on every action.
-2. **Minimal** — Show only what matters. No clutter.
-3. **Readable** — Numbers are legible. Status is obvious at a glance.
-4. **Consistent** — Same patterns across all views.
-5. **Responsive** — Usable on tablet-sized screens within wp-admin.
+1. **Fast** -Pages load instantly. No spinner on every action.
+2. **Minimal** -Show only what matters. No clutter.
+3. **Readable** -Numbers are legible. Status is obvious at a glance.
+4. **Consistent** -Same patterns across all views.
+5. **Responsive** -Usable on tablet-sized screens within wp-admin.
 
 ---
 
@@ -61,7 +61,7 @@ Optional modules (WooCommerce, Analytics) add their own top-level or submenu ent
 
 ---
 
-## Page 1 — Dashboard
+## Page 1 -Dashboard
 
 ### Widgets
 
@@ -76,7 +76,7 @@ Optional modules (WooCommerce, Analytics) add their own top-level or submenu ent
 
 ---
 
-## Page 2 — Sessions
+## Page 2 -Sessions
 
 A full-featured session management table. The most important page in the plugin.
 
@@ -94,8 +94,8 @@ A full-featured session management table. The most important page in the plugin.
 
 ### Row Actions
 
-- **Logout** — Force-terminate the session immediately
-- **Inspect** — Open full session detail
+- **Logout** -Force-terminate the session immediately
+- **Inspect** -Open full session detail
 
 ### Table Features
 
@@ -107,7 +107,7 @@ A full-featured session management table. The most important page in the plugin.
 
 ---
 
-## Page 3 — Activity Logs
+## Page 3 -Activity Logs
 
 Per-user chronological activity view. Inspired by GitHub's event timeline and Stripe's event log.
 
@@ -136,7 +136,7 @@ Per-user chronological activity view. Inspired by GitHub's event timeline and St
 
 ---
 
-## Page 4 — Rules
+## Page 4 -Rules
 
 Session policy configuration. Simple, structured, no clutter.
 
@@ -156,7 +156,7 @@ Radio or select for each rule row:
 
 ---
 
-## Page 5 — Devices
+## Page 5 -Devices
 
 Per-user device history view. Inspired by the Google Account security panel.
 
@@ -182,7 +182,7 @@ Jane Smith (editor)
 
 ---
 
-## Page 6 — Settings
+## Page 6 -Settings
 
 Plugin configuration. All options in one page, grouped by section.
 
@@ -201,7 +201,7 @@ Plugin configuration. All options in one page, grouped by section.
 
 ## Empty States
 
-Every view needs a clear empty state — no blank tables.
+Every view needs a clear empty state -no blank tables.
 
 Example for Sessions:
 

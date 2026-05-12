@@ -183,7 +183,7 @@ If optional dependencies are unavailable, the plugin degrades gracefully:
 |---|---|
 | Redis / object cache | Fall back to transients or direct DB |
 | WP-Cron delayed | Queue processes on next cron trigger |
-| GeoIP database absent | **Plugin works fully without it** — country field left null; no error shown |
+| GeoIP database absent | **Plugin works fully without it** -country field left null; no error shown |
 | WooCommerce not active | WooCommerce module silently disabled |
 
 ### GeoIP Is Optional
@@ -199,7 +199,7 @@ The MaxMind GeoLite2 database is **optional**. SessionPilot must function perfec
 - Admin UI shows `—` or `Unknown` for country fields
 - No errors, no warnings in logs
 
-### 4. Event-Based Tracking — Authenticated Users Only
+### 4. Event-Based Tracking -Authenticated Users Only
 
 **v1 tracks ONLY authenticated user events:**
 - Login events
@@ -208,7 +208,7 @@ The MaxMind GeoLite2 database is **optional**. SessionPilot must function perfec
 - Session activity (last seen, current session state)
 
 **v1 does NOT track:**
-- Every page view (even for logged-in users — too much write volume)
+- Every page view (even for logged-in users -too much write volume)
 - Full user journeys or navigation paths
 - Frontend click or scroll events
 - Anonymous visitor behavior of any kind
@@ -304,4 +304,4 @@ Real-time features are implemented via:
 | WordPress REST API (`/wp-json/sessionpilot/v1/`) | All data endpoints |
 | Server-Sent Events (SSE) | Optional future enhancement for live feed |
 
-This keeps deployment simple — works on any shared host with PHP and MySQL.
+This keeps deployment simple -works on any shared host with PHP and MySQL.

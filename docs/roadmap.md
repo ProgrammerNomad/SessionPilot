@@ -19,23 +19,23 @@ The correct approach: **ship a small, excellent product** that beats every compe
 
 | Feature | v1 Core | Future Module |
 |---|---|---|
-| Session management (force logout, limits, idle, device) | ✅ | — |
-| Online users dashboard | ✅ | — |
-| Admin activity logs | ✅ | — |
-| Session rules (per role/user) | ✅ | — |
-| Basic REST API | ✅ | — |
-| Basic WP-CLI | ✅ | — |
-| CSV export | ✅ | — |
-| Email alerts | ✅ | — |
-| Cleanup cron | ✅ | — |
-| WooCommerce Intelligence | — | Phase 2 |
-| Analytics Engine | — | Phase 2 |
-| Extended notifications (Discord, Slack, Webhook) | — | Phase 2 |
-| Heatmaps | — | Phase 3 |
-| Purchase journey / funnel tracking | — | Phase 3 |
-| AI / anomaly detection | — | Phase 3 |
-| Multi-server aggregation | — | Phase 3 |
-| Multisite aggregation | — | Phase 3 |
+| Session management (force logout, limits, idle, device) | ✅ | -|
+| Online users dashboard | ✅ | -|
+| Admin activity logs | ✅ | -|
+| Session rules (per role/user) | ✅ | -|
+| Basic REST API | ✅ | -|
+| Basic WP-CLI | ✅ | -|
+| CSV export | ✅ | -|
+| Email alerts | ✅ | -|
+| Cleanup cron | ✅ | -|
+| WooCommerce Intelligence | -| Phase 2 |
+| Analytics Engine | -| Phase 2 |
+| Extended notifications (Discord, Slack, Webhook) | -| Phase 2 |
+| Heatmaps | -| Phase 3 |
+| Purchase journey / funnel tracking | -| Phase 3 |
+| AI / anomaly detection | -| Phase 3 |
+| Multi-server aggregation | -| Phase 3 |
+| Multisite aggregation | -| Phase 3 |
 
 ---
 
@@ -55,11 +55,11 @@ What SessionPilot v1 delivers free that competitors charge for:
 | Role-based session policies | SessionQuota (Pro), WP Activity Log (premium) |
 | WP-CLI session management | Most plugins (none or premium) |
 
-> **v1 alone already outclasses any single competitor** — without needing analytics, WooCommerce, or AI.
+> **v1 alone already outclasses any single competitor** -without needing analytics, WooCommerce, or AI.
 
 ---
 
-## MVP — Version 1.0 Scope
+## MVP -Version 1.0 Scope
 
 ### What IS in v1
 
@@ -68,7 +68,7 @@ What SessionPilot v1 delivers free that competitors charge for:
 - Force logout (single user, bulk, by role)
 - Concurrent session limits (global, per role, per user override)
 - Idle timeout (auto-expire after configurable inactivity period)
-- Browser-close detection (best-effort — see caveat below)
+- Browser-close detection (best-effort -see caveat below)
 
 **Device Tracking**
 - Browser name and version
@@ -105,7 +105,7 @@ What SessionPilot v1 delivers free that competitors charge for:
 
 | Removed Feature | Why |
 |---|---|
-| WooCommerce Intelligence | Standalone product-level complexity — own phase |
+| WooCommerce Intelligence | Standalone product-level complexity -own phase |
 | Analytics Engine | Dangerously large scope; DB write overhead on shared hosting |
 | Full user journey / funnel tracking | Massive write volume; shared hosting risk |
 | Heatmaps | Technically expensive, different product entirely |
@@ -116,7 +116,7 @@ What SessionPilot v1 delivers free that competitors charge for:
 
 ---
 
-## Browser-Close Logout — Important Caveat
+## Browser-Close Logout -Important Caveat
 
 Browser-close detection is included in v1 **as a best-effort convenience feature**, not a guaranteed security control.
 
@@ -133,7 +133,7 @@ Browser-close detection is included in v1 **as a best-effort convenience feature
 - Grace period is configurable (default: 2 minutes)
 
 **Label it clearly in the UI:**
-> *"Best-effort browser-close detection — not a guaranteed security mechanism"*
+> *"Best-effort browser-close detection -not a guaranteed security mechanism"*
 
 ---
 
@@ -143,32 +143,32 @@ Browser-close detection is included in v1 **as a best-effort convenience feature
 
 | Phase | Focus | Key Deliverables |
 |---|---|---|
-| **Phase 1 — Foundation** | Core backend | DB tables, migrations, WP hooks registered, plugin scaffold, service providers |
-| **Phase 2 — Session Engine** | Session tracking | `WP_Session_Tokens` integration, `$wpdb` session writes, force logout, concurrent limits, idle timeout, browser-close heartbeat, cron cleanup |
-| **Phase 3 — Activity Logs** | Event logging | `$wpdb` writes on login/logout/role/plugin hooks, device fingerprinting (WhichBrowser + Mobile Detect) |
-| **Phase 4 — Admin UI** | Dashboard + 6 pages | Blade + Alpine + HTMX: Dashboard, Sessions, Activity Logs, Rules, Devices, Settings |
-| **Phase 5 — Infrastructure** | REST API + WP-CLI | All `/sp/v1/` endpoints, WP-CLI commands, nonces, capability checks, CSV export |
-| **Phase 6 — Hardening** | Polish + performance | PHPUnit tests, security audit, shared-hosting performance profiling, UI polish |
+| **Phase 1 -Foundation** | Core backend | DB tables, migrations, WP hooks registered, plugin scaffold, service providers |
+| **Phase 2 -Session Engine** | Session tracking | `WP_Session_Tokens` integration, `$wpdb` session writes, force logout, concurrent limits, idle timeout, browser-close heartbeat, cron cleanup |
+| **Phase 3 -Activity Logs** | Event logging | `$wpdb` writes on login/logout/role/plugin hooks, device fingerprinting (WhichBrowser + Mobile Detect) |
+| **Phase 4 -Admin UI** | Dashboard + 6 pages | Blade + Alpine + HTMX: Dashboard, Sessions, Activity Logs, Rules, Devices, Settings |
+| **Phase 5 -Infrastructure** | REST API + WP-CLI | All `/sp/v1/` endpoints, WP-CLI commands, nonces, capability checks, CSV export |
+| **Phase 6 -Hardening** | Polish + performance | PHPUnit tests, security audit, shared-hosting performance profiling, UI polish |
 
 **Total estimated:** ~22 weeks solo, faster with parallel contributors
 
 ---
 
-## Phase 2 — Optional Modules (Post-Stable v1)
+## Phase 2 -Optional Modules (Post-Stable v1)
 
 Shipped as **separate optional modules**, not bundled into core. Core stays lean regardless of which modules are active.
 
 | Module | Description |
 |---|---|
 | WooCommerce Intelligence | Live carts, abandoned cart detection, product interest, purchase journey |
-| Analytics Engine | Page views, sessions, bounce rate, referrers — privacy-first, local only |
+| Analytics Engine | Page views, sessions, bounce rate, referrers -privacy-first, local only |
 | Extended Notifications | Webhook, Discord, Slack, ntfy, Gotify channels |
 | Advanced Export | JSON, SQL backup, scheduled exports, filtered downloads |
 | Suspicious Activity Detection | Rule-based flagging: impossible travel, rapid IP change, unusual login times |
 
 ---
 
-## Phase 3 — Long-Term Vision
+## Phase 3 -Long-Term Vision
 
 | Feature | Description |
 |---|---|
@@ -235,7 +235,7 @@ Before tagging any release:
 
 - Releases are **stable and tested** before shipping
 - No half-baked features merged to meet a deadline
-- Each phase is independently valuable — users don't need Phase 2/3
-- Optional modules are opt-in — core stays lean regardless of what is installed
+- Each phase is independently valuable -users don't need Phase 2/3
+- Optional modules are opt-in -core stays lean regardless of what is installed
 - Breaking changes are documented with migration paths
 - **The goal is to be the best WordPress session manager, not the biggest.**

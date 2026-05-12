@@ -39,7 +39,7 @@ Everything below is **always active**. No feature flags, no settings to enable. 
 
 ---
 
-### Core 1 — Session Engine
+### Core 1 -Session Engine
 
 The heart of the plugin. Tracks and controls active WordPress sessions.
 
@@ -65,7 +65,7 @@ The heart of the plugin. Tracks and controls active WordPress sessions.
 
 ---
 
-### Core 2 — Activity Logs
+### Core 2 -Activity Logs
 
 Audit trail for all important WordPress admin and authentication events.
 
@@ -90,7 +90,7 @@ Audit trail for all important WordPress admin and authentication events.
 
 ---
 
-### Core 3 — Online Users Dashboard
+### Core 3 -Online Users Dashboard
 
 Shows who is logged in and active right now.
 
@@ -104,7 +104,7 @@ Shows who is logged in and active right now.
 
 ---
 
-### Core 4 — Device Tracking
+### Core 4 -Device Tracking
 
 Stores device fingerprint per session, linked to the user account.
 
@@ -114,13 +114,13 @@ Stores device fingerprint per session, linked to the user account.
 - Device type (desktop / mobile / tablet)
 - IP address
 - Last activity timestamp
-- Country (if GeoIP Module is enabled — optional)
+- Country (if GeoIP Module is enabled -optional)
 
-Inspired by the Google Account security panel — a per-user view of all known devices and sessions.
+Inspired by the Google Account security panel -a per-user view of all known devices and sessions.
 
 ---
 
-### Core 5 — Session Rules
+### Core 5 -Session Rules
 
 Policy engine for session behavior. Configurable per role and per user.
 
@@ -132,7 +132,7 @@ Policy engine for session behavior. Configurable per role and per user.
 
 ---
 
-### Core 6 — Infrastructure
+### Core 6 -Infrastructure
 
 Supporting systems that all core features depend on.
 
@@ -153,9 +153,9 @@ These are separate, opt-in additions. They are **not loaded** unless explicitly 
 
 ---
 
-### Optional Module A — WooCommerce Module
+### Optional Module A -WooCommerce Module
 
-> **Phase 2** — Only activates if WooCommerce is installed and active. Loads zero code if WooCommerce is absent.
+> **Phase 2** -Only activates if WooCommerce is installed and active. Loads zero code if WooCommerce is absent.
 
 **Features:**
 - Live cart view (active carts, cart value, checkout status)
@@ -165,9 +165,9 @@ These are separate, opt-in additions. They are **not loaded** unless explicitly 
 
 ---
 
-### Optional Module B — Analytics Module
+### Optional Module B -Analytics Module
 
-> **Phase 2** — Privacy-first, local-only page analytics. Opt-in only.
+> **Phase 2** -Privacy-first, local-only page analytics. Opt-in only.
 
 **Features:**
 - Page view counts (logged-in users only, or optionally all visitors)
@@ -179,9 +179,9 @@ These are separate, opt-in additions. They are **not loaded** unless explicitly 
 
 ---
 
-### Optional Module C — Notifications Module
+### Optional Module C -Notifications Module
 
-> **Phase 2** — Extended notification channels beyond the core email alerts.
+> **Phase 2** -Extended notification channels beyond the core email alerts.
 
 **Channels:**
 - Webhook (HTTP POST to any endpoint)
@@ -192,19 +192,19 @@ These are separate, opt-in additions. They are **not loaded** unless explicitly 
 
 ---
 
-### Optional Module D — GeoIP Module
+### Optional Module D -GeoIP Module
 
-> **Optional at any time** — Can be enabled in v1 without waiting for Phase 2.
+> **Optional at any time** -Can be enabled in v1 without waiting for Phase 2.
 
 **Features:**
 - Country and region detection from IP
 - Country field populated in sessions, activity logs, and device records
-- Local `.mmdb` file lookup — no API calls ever
+- Local `.mmdb` file lookup -no API calls ever
 
 **Requirements:**
 - MaxMind GeoLite2 database downloaded and stored in `storage/geoip/`
 - Monthly refresh (MaxMind license requirement)
-- Plugin works fully without this module — country fields show `—` when absent
+- Plugin works fully without this module -country fields show `—` when absent
 
 ---
 

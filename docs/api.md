@@ -229,7 +229,7 @@ Query the activity log.
 | `user_id` | int | Filter by user |
 | `action` | string | Filter by action type |
 | `severity` | string | `info`, `warning`, or `critical` |
-| `since` | string | ISO 8601 date — return logs after this time |
+| `since` | string | ISO 8601 date -return logs after this time |
 | `per_page` | int | Results per page |
 | `page` | int | Page number |
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document inventories the main WordPress session management and activity logging plugins, compares their free vs. paid features, and identifies the gaps that SessionPilot fills — entirely for free.
+This document inventories the main WordPress session management and activity logging plugins, compares their free vs. paid features, and identifies the gaps that SessionPilot fills -entirely for free.
 
 ---
 
@@ -17,7 +17,7 @@ This document inventories the main WordPress session management and activity log
 | [Sessions](https://wordpress.org/plugins/sessions/) | PerfOps | 900+ | Active |
 | [SessionQuota](https://wordpress.org/plugins/sessionquota/) | HandyPlugins | <10 | Active |
 | [Activity Log for WordPress (WinterLock)](https://wordpress.org/plugins/winterlock/) | activity-log.com | 60+ | Active |
-| Inactive Logout | — | — | Active |
+| Inactive Logout | -| -| Active |
 
 ---
 

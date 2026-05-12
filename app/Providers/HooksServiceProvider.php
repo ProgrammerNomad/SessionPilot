@@ -22,7 +22,7 @@ class HooksServiceProvider extends ServiceProvider
         add_action('wp_logout', [$sessions, 'onLogout'], 10, 1);
         add_action('clear_auth_cookie', [$sessions, 'onAuthCookieCleared']);
 
-        // Heartbeat — keep session last_activity fresh
+        // Heartbeat -keep session last_activity fresh
         add_filter('heartbeat_received', [$sessions, 'onHeartbeat'], 10, 2);
 
         // Activity logging

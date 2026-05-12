@@ -239,10 +239,10 @@ chore: update GeoLite2 database
 SessionPilot uses [Semantic Versioning](https://semver.org/):
 
 - `MAJOR.MINOR.PATCH`
-- `1.0.0` — initial stable release
-- `1.1.0` — new features (backward compatible)
-- `1.0.1` — bug fixes only
-- `2.0.0` — breaking changes
+- `1.0.0` -initial stable release
+- `1.1.0` -new features (backward compatible)
+- `1.0.1` -bug fixes only
+- `2.0.0` -breaking changes
 
 The version is defined in:
 - `sessionpilot.php` plugin header (`Version:`)
@@ -254,7 +254,7 @@ The version is defined in:
 ## Reporting Issues
 
 - Use [GitHub Issues](https://github.com/your-org/sessionpilot/issues)
-- For security vulnerabilities, see `SECURITY.md` — do **not** open a public issue
+- For security vulnerabilities, see `SECURITY.md` -do **not** open a public issue
 
 ---
 

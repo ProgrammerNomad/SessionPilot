@@ -1,4 +1,4 @@
-# SessionPilot — Documentation
+# SessionPilot -Documentation
 
 > **Smart session intelligence for WordPress**  
 > Self-hosted · Privacy-first · Open source · No cloud lock-in

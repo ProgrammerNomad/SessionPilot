@@ -12,7 +12,7 @@
 
 ## Primary Target Audience
 
-**WordPress admins and agencies** — because they are the universal layer.
+**WordPress admins and agencies** -because they are the universal layer.
 
 Admins and agencies manage:
 - WooCommerce sites
@@ -46,7 +46,7 @@ SessionPilot must be:
 - **No feature paywalls**
 - **Lightweight and fast** on shared hosting
 - **WordPress-native**
-- **Focused** — does one thing excellently
+- **Focused** -does one thing excellently
 
 ---
 
@@ -62,7 +62,7 @@ Most competitors are moving in the wrong direction:
 | Enterprise-only | Too complex for small site owners |
 | Privacy-unfriendly | GDPR-hostile, external trackers |
 
-SessionPilot takes the opposite approach — local-first, simple, and completely under the user's control.
+SessionPilot takes the opposite approach -local-first, simple, and completely under the user's control.
 
 ---
 
@@ -70,7 +70,7 @@ SessionPilot takes the opposite approach — local-first, simple, and completely
 
 SessionPilot is a **logged-in user session & activity management platform** for WordPress.
 
-It tracks and controls authenticated WordPress users — admins, editors, authors, subscribers, WooCommerce customers, LMS students, membership users.
+It tracks and controls authenticated WordPress users -admins, editors, authors, subscribers, WooCommerce customers, LMS students, membership users.
 
 **It is:**
 - A session management and control system
@@ -106,7 +106,7 @@ It tracks and controls authenticated WordPress users — admins, editors, author
 
 ## Positioning Statement
 
-> **SessionPilot — Open-source session & activity control center for WordPress**
+> **SessionPilot -Open-source session & activity control center for WordPress**
 
 This position is:
 - Less crowded than analytics (vs. GA / Plausible / Matomo)
@@ -122,12 +122,12 @@ No well-known open-source plugin currently fills this role completely and freely
 
 | Dimension | Result |
 |---|---|
-| Technical complexity | Lower — no pageview pipelines, no event streams, no visitor tracking |
-| DB write volume | Lower — only authenticated user events |
-| Privacy / GDPR | Simpler — users are already authenticated, expected operational tracking |
-| WP integration | Deeper — can rely fully on `WP_Session_Tokens` |
-| Competition | Less crowded — session managers are fewer and weaker than analytics tools |
-| Support burden | Lower — focused scope means fewer edge cases |
+| Technical complexity | Lower -no pageview pipelines, no event streams, no visitor tracking |
+| DB write volume | Lower -only authenticated user events |
+| Privacy / GDPR | Simpler -users are already authenticated, expected operational tracking |
+| WP integration | Deeper -can rely fully on `WP_Session_Tokens` |
+| Competition | Less crowded -session managers are fewer and weaker than analytics tools |
+| Support burden | Lower -focused scope means fewer edge cases |
 
 ---
 
@@ -151,4 +151,4 @@ SessionPilot **does** fill the gap left by weaker session-focused plugins:
 | WPForce Logout | Force logout only, no monitoring |
 | Defender Pro | Security product, not a session manager |
 
-SessionPilot fills the gap: **session control + access monitoring + activity logging** — all in one plugin, free, self-hosted.
+SessionPilot fills the gap: **session control + access monitoring + activity logging** -all in one plugin, free, self-hosted.

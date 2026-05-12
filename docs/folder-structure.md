@@ -121,7 +121,7 @@ sessionpilot/
 
 ### `app/` Structure
 
-Follows the Acorn / Laravel convention. Each subdirectory has a single responsibility. Avoid putting logic directly in controllers — delegate to Services and Actions.
+Follows the Acorn / Laravel convention. Each subdirectory has a single responsibility. Avoid putting logic directly in controllers -delegate to Services and Actions.
 
 ### `database/migrations/`
 
@@ -129,12 +129,12 @@ Each migration is numbered and timestamped. Run via Acorn's migration command or
 
 ### `storage/geoip/`
 
-The MaxMind GeoLite2 `.mmdb` file lives here. It is updated on a scheduled cron job. Never bundled in the plugin ZIP — downloaded post-install.
+The MaxMind GeoLite2 `.mmdb` file lives here. It is updated on a scheduled cron job. Never bundled in the plugin ZIP -downloaded post-install.
 
 ### `resources/views/`
 
-Blade templates only. No PHP mixed with HTML elsewhere. All data is passed from controllers to views — no business logic in templates.
+Blade templates only. No PHP mixed with HTML elsewhere. All data is passed from controllers to views -no business logic in templates.
 
 ### Plugin Entry Point
 
-`sessionpilot.php` is minimal — it bootstraps Acorn and registers the service providers. All real logic lives in `app/`.
+`sessionpilot.php` is minimal -it bootstraps Acorn and registers the service providers. All real logic lives in `app/`.

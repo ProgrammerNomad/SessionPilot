@@ -22,7 +22,7 @@ SessionPilot is a WordPress plugin that gives site admins complete visibility an
 | Feature | Description |
 |---|---|
 | **Session Management** | View all active sessions with device, browser, OS, IP, and last-seen |
-| **Force Logout** | Terminate any session instantly — single user, by role, or all |
+| **Force Logout** | Terminate any session instantly -single user, by role, or all |
 | **Concurrent Limits** | Restrict simultaneous sessions globally, per role, or per user |
 | **Idle Timeout** | Auto-expire sessions after configurable inactivity period |
 | **Browser-Close Detection** | Best-effort logout when tab closes (heartbeat-based) |
@@ -44,13 +44,13 @@ Most competitors split these features across multiple paid plans. SessionPilot s
 
 | What You'd Normally Pay For | SessionPilot |
 |---|---|
-| Force logout — WP Activity Log Pro (~$149/yr) | ✅ Free |
-| Concurrent session limits — SessionQuota Pro ($49) | ✅ Free |
-| Idle timeout — Inactive Logout Pro ($39/yr) | ✅ Free |
-| Real-time active users — WP Activity Log Premium | ✅ Free |
-| CSV export — Simple History Premium ($49/yr) | ✅ Free |
-| Per-user session overrides — Loggedin add-ons ($29–$49) | ✅ Free |
-| REST API — no competitor offers this | ✅ Free |
+| Force logout -WP Activity Log Pro (~$149/yr) | ✅ Free |
+| Concurrent session limits -SessionQuota Pro ($49) | ✅ Free |
+| Idle timeout -Inactive Logout Pro ($39/yr) | ✅ Free |
+| Real-time active users -WP Activity Log Premium | ✅ Free |
+| CSV export -Simple History Premium ($49/yr) | ✅ Free |
+| Per-user session overrides -Loggedin add-ons ($29–$49) | ✅ Free |
+| REST API -no competitor offers this | ✅ Free |
 
 ---
 
@@ -210,4 +210,4 @@ No Pro version. No license keys. No cloud dependency. Everything is free, foreve
 
 > "SessionPilot does in one free plugin what competitors charge $50–$150/year for across multiple paid products."
 
-Built for WordPress admins and agencies who want full control over their users' sessions — locally, privately, and without vendor lock-in.
+Built for WordPress admins and agencies who want full control over their users' sessions -locally, privately, and without vendor lock-in.

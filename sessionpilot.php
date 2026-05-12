@@ -36,7 +36,7 @@ if ( file_exists( SESSIONPILOT_PLUGIN_DIR . 'vendor/autoload.php' ) ) {
     return;
 }
 
-// Activation / deactivation hooks — must be registered before Acorn boots
+// Activation / deactivation hooks -must be registered before Acorn boots
 register_activation_hook( __FILE__, [ \ProgrammerNomad\SessionPilot\Installer::class, 'activate' ] );
 register_deactivation_hook( __FILE__, [ \ProgrammerNomad\SessionPilot\Installer::class, 'deactivate' ] );
 

@@ -4,7 +4,7 @@
 
 ### Backend Framework
 
-**[Roots Acorn](https://roots.io/acorn/)** — Laravel-style framework for WordPress plugins.
+**[Roots Acorn](https://roots.io/acorn/)** -Laravel-style framework for WordPress plugins.
 
 Acorn is the recommended foundation for SessionPilot because it provides:
 
@@ -12,9 +12,9 @@ Acorn is the recommended foundation for SessionPilot because it provides:
 - Dependency injection container
 - Service providers
 - Event / listener system
-- **Eloquent ORM** — database models with relationships, scopes, and query builder
-- **Database migrations** — reproducible schema installs and upgrades
-- **Laravel Queues** — background job processing (WP-Cron or Redis driver)
+- **Eloquent ORM** -database models with relationships, scopes, and query builder
+- **Database migrations** -reproducible schema installs and upgrades
+- **Laravel Queues** -background job processing (WP-Cron or Redis driver)
 - Validation
 - Artisan-style console commands (mapped to WP-CLI)
 - Blade templating
@@ -57,7 +57,7 @@ Eloquent is used **only for small, low-frequency admin-side models**:
 All event recording and session tracking uses `$wpdb` directly with prepared statements:
 
 ```php
-// Session write — fast, low overhead
+// Session write -fast, low overhead
 global $wpdb;
 $wpdb->insert(
     $wpdb->prefix . 'sp_sessions',
@@ -81,8 +81,8 @@ Background processing (GeoIP lookups, email alerts, log purging) is handled via 
 
 | Driver | Use Case |
 |---|---|
-| `wp-cron` | Default — works on all shared hosting |
-| `redis` | Optional — for high-traffic sites needing faster queue processing |
+| `wp-cron` | Default -works on all shared hosting |
+| `redis` | Optional -for high-traffic sites needing faster queue processing |
 
 ---
 
@@ -94,7 +94,7 @@ Everything lives inside `wp-admin`.
 
 ### Build Tool
 
-**[Vite](https://vitejs.dev/)** — fast frontend build tool for bundling JS/CSS assets.
+**[Vite](https://vitejs.dev/)** -fast frontend build tool for bundling JS/CSS assets.
 
 ```json
 // package.json (simplified)
@@ -108,7 +108,7 @@ Everything lives inside `wp-admin`.
 
 Outputs compiled assets to `public/js/` and `public/css/`.
 
-### Recommended Admin UI Stack (Primary — All Pages)
+### Recommended Admin UI Stack (Primary -All Pages)
 
 | Technology | Role |
 |---|---|
@@ -122,13 +122,13 @@ This combination keeps the plugin:
 - Simple for contributors to work with
 - No Node.js runtime requirement for users
 
-> **This is the default for all 6 admin pages.** Dashboard, Sessions, Activity Logs, Rules, Devices, Settings — all Blade + Alpine + HTMX.
+> **This is the default for all 6 admin pages.** Dashboard, Sessions, Activity Logs, Rules, Devices, Settings -all Blade + Alpine + HTMX.
 
-### React + TypeScript — Selective Use Only
+### React + TypeScript -Selective Use Only
 
 React is used **only** where the interactivity requirement genuinely cannot be met by Alpine + HTMX:
 
-- The session data table (TanStack Table — sortable, filterable, paginated)
+- The session data table (TanStack Table -sortable, filterable, paginated)
 - Charts in the Dashboard (Recharts)
 
 **React is NOT used for:**
@@ -178,7 +178,7 @@ If you use a utility CSS approach, scope it entirely inside `.sp-admin-wrap` usi
 
 | Library | Notes |
 |---|---|
-| [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data) | **Local `.mmdb` database only** — no API calls |
+| [MaxMind GeoLite2](https://dev.maxmind.com/geoip/geolite2-free-geolocation-data) | **Local `.mmdb` database only** -no API calls |
 
 > The GeoLite2 `.mmdb` database file is downloaded and stored locally on the WordPress server. SessionPilot never calls the MaxMind API for lookups. The database must be refreshed monthly (GeoLite2 license requirement).
 
@@ -190,7 +190,7 @@ Where possible, SessionPilot uses WordPress built-in APIs to stay compatible and
 
 | API | Usage |
 |---|---|
-| `WP_Session_Tokens` | Core session management — get, destroy, destroy all |
+| `WP_Session_Tokens` | Core session management -get, destroy, destroy all |
 | `register_rest_route()` | REST API endpoint registration |
 | `wp_schedule_event()` | Background cron tasks (cleanup, queue processing) |
 | Settings API | Plugin configuration pages |

@@ -14,7 +14,7 @@ class IpHelper
         foreach ($headers as $header) {
             if ( ! empty($_SERVER[$header]) ) {
                 $ip = sanitize_text_field(wp_unslash($_SERVER[$header]));
-                // X-Forwarded-For can be a comma-separated list — take the first
+                // X-Forwarded-For can be a comma-separated list -take the first
                 if ($header === 'HTTP_X_FORWARDED_FOR') {
                     $ip = trim(explode(',', $ip)[0]);
                 }

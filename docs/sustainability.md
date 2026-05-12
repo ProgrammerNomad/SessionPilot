@@ -61,6 +61,6 @@ A `CONTRIBUTING.md` and `SECURITY.md` should be created in the repository root b
 
 SessionPilot should be:
 
-> **The go-to self-hosted session intelligence plugin for WordPress** — recommended by developers, trusted by privacy-conscious site owners, and maintained by a healthy open-source community.
+> **The go-to self-hosted session intelligence plugin for WordPress** -recommended by developers, trusted by privacy-conscious site owners, and maintained by a healthy open-source community.
 
 Not a startup. Not a SaaS. A reliable open-source tool that outlasts any single vendor.

@@ -29,5 +29,5 @@ Thumbs.db
 !/bootstrap/cache/.gitkeep
 
 # Composer lock is committed, npm lock too
-# composer.lock — keep
-# package-lock.json — keep
+# composer.lock -keep
+# package-lock.json -keep

@@ -15,7 +15,7 @@
             <div class="sp-form-row" x-show="form.target === 'role'">
                 <label>Role</label>
                 <select x-model="form.user_role" class="sp-select">
-                    <option value="">— select role —</option>
+                    <option value="">Select role</option>
                     @foreach (wp_roles()->get_names() as $slug => $name)
                         <option value="{{ esc_attr($slug) }}">{{ esc_html($name) }}</option>
                     @endforeach
