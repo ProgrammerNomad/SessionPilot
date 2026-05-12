@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace ProgrammerNomad\SessionPilot\Providers;
 
-use Roots\Acorn\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -186,3 +186,4 @@ class AdminServiceProvider extends ServiceProvider
         echo view('sessionpilot::' . $view)->render(); // phpcs:ignore WordPress.Security.EscapeOutput
     }
 }
+

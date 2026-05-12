@@ -40,5 +40,12 @@ if ( file_exists( SESSIONPILOT_PLUGIN_DIR . 'vendor/autoload.php' ) ) {
 register_activation_hook( __FILE__, [ \ProgrammerNomad\SessionPilot\Installer::class, 'activate' ] );
 register_deactivation_hook( __FILE__, [ \ProgrammerNomad\SessionPilot\Installer::class, 'deactivate' ] );
 
-// Boot Acorn application
-\Roots\bootloader( __FILE__ );
+// Tell Acorn where the plugin root is
+if ( ! defined( 'ACORN_BASEPATH' ) ) {
+    define( 'ACORN_BASEPATH', SESSIONPILOT_PLUGIN_DIR );
+}
+
+// Boot Acorn on after_setup_theme (standard Acorn boot hook)
+add_action( 'after_setup_theme', function () {
+    \Roots\bootloader()->boot();
+}, 1 );

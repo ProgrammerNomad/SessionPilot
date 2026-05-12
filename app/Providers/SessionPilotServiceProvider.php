@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace ProgrammerNomad\SessionPilot\Providers;
 
-use Roots\Acorn\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 use ProgrammerNomad\SessionPilot\Services\SessionService;
 use ProgrammerNomad\SessionPilot\Services\ActivityLogService;
 use ProgrammerNomad\SessionPilot\Services\DeviceService;
@@ -31,3 +31,4 @@ class SessionPilotServiceProvider extends ServiceProvider
         $this->app->register(CronServiceProvider::class);
     }
 }
+

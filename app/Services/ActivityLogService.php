@@ -17,6 +17,11 @@ class ActivityLogService
     ): void {
         global $wpdb;
 
+        // Guard: skip silently if table doesn't exist yet (e.g. during install/uninstall)
+        if ( $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}sp_activity_logs'" ) === null ) {
+            return;
+        }
+
         $wpdb->insert(
             $wpdb->prefix . 'sp_activity_logs',
             [

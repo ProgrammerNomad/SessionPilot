@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace ProgrammerNomad\SessionPilot\Providers;
 
-use Roots\Acorn\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 use ProgrammerNomad\SessionPilot\Http\Controllers\SessionController;
 use ProgrammerNomad\SessionPilot\Http\Controllers\LogController;
 use ProgrammerNomad\SessionPilot\Http\Controllers\RuleController;
@@ -77,3 +77,4 @@ class RestApiServiceProvider extends ServiceProvider
         return current_user_can('manage_options');
     }
 }
+

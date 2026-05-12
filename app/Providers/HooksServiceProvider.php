@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace ProgrammerNomad\SessionPilot\Providers;
 
-use Roots\Acorn\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 use ProgrammerNomad\SessionPilot\Services\SessionService;
 use ProgrammerNomad\SessionPilot\Services\ActivityLogService;
 
@@ -37,3 +37,4 @@ class HooksServiceProvider extends ServiceProvider
         add_action('password_reset', [$logs, 'logPasswordReset'], 10, 1);
     }
 }
+

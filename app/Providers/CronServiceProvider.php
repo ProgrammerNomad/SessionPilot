@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace ProgrammerNomad\SessionPilot\Providers;
 
-use Roots\Acorn\ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 use ProgrammerNomad\SessionPilot\Jobs\CleanupExpiredSessions;
 use ProgrammerNomad\SessionPilot\Jobs\CleanupOldLogs;
 
@@ -41,3 +41,4 @@ class CronServiceProvider extends ServiceProvider
         }
     }
 }
+

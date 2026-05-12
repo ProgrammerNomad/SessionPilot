@@ -55,6 +55,10 @@ class IpHelper
 
         if ($cache === null) {
             global $wpdb;
+            // Guard: table may not exist during install/uninstall
+            if ( $wpdb->get_var( "SHOW TABLES LIKE '{$wpdb->prefix}sp_settings'" ) === null ) {
+                return false;
+            }
             $val    = $wpdb->get_var("SELECT setting_value FROM {$wpdb->prefix}sp_settings WHERE setting_key = 'anonymize_ip'");
             $cache  = (bool) ($val ?? false);
         }
