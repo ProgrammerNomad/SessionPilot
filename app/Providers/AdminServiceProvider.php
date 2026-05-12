@@ -164,7 +164,14 @@ class AdminServiceProvider extends ServiceProvider
             if ( ! isset($_POST[$key]) ) {
                 continue;
             }
-            $value = sanitize_text_field(wp_unslash($_POST[$key]));
+            if ($key === 'alert_email') {
+                $value = sanitize_email(wp_unslash($_POST[$key]));
+                if ( ! is_email($value) && $value !== '' ) {
+                    continue; // skip invalid email
+                }
+            } else {
+                $value = sanitize_text_field(wp_unslash($_POST[$key]));
+            }
             $wpdb->update(
                 $wpdb->prefix . 'sp_settings',
                 ['setting_value' => $value, 'updated_at' => current_time('mysql')],

@@ -1,7 +1,7 @@
 <div class="wrap sp-admin-wrap" x-data="spSettings()">
     <h1 class="sp-page-title">Settings</h1>
 
-    <div class="sp-card sp-card--form" style="max-width: 640px;">
+    <div class="sp-card sp-card--form sp-card--settings">
         <form @submit.prevent="saveSettings()">
 
             <h2>Session & Cleanup</h2>

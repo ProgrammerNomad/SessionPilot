@@ -5,7 +5,7 @@
  * Description:       Open-source session & activity monitoring for logged-in WordPress users. Self-hosted, privacy-first, no cloud dependency.
  * Version:           1.0.0
  * Requires at least: 6.4
- * Requires PHP:      8.1
+ * Requires PHP:      8.2
  * Author:            Shiv Singh
  * Author URI:        https://github.com/ProgrammerNomad
  * License:           GPL v2 or later

@@ -27,6 +27,9 @@ Thumbs.db
 # Build caches
 /bootstrap/cache/*.php
 !/bootstrap/cache/.gitkeep
+/dist/
+/SessionPilot.zip
+/.phpunit.result.cache
 
 # Composer lock is committed, npm lock too
 # composer.lock -keep

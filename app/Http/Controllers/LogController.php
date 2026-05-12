@@ -91,14 +91,26 @@ class LogController
                 $row['timestamp'],
                 $row['user_id'] ?? '',
                 $row['action_type'],
-                $row['description'] ?? '',
+                self::csvSafe($row['description'] ?? ''),
                 $row['ip'] ?? '',
-                $row['user_agent'] ?? '',
+                self::csvSafe($row['user_agent'] ?? ''),
                 $row['severity'],
             ]);
         }
 
         fclose($out);
         exit;
+    }
+
+    /**
+     * Prevent CSV injection by prefixing formula-like values with a tab.
+     * Affects fields that could contain user-controlled data.
+     */
+    private static function csvSafe(string $value): string
+    {
+        if ($value !== '' && in_array($value[0], ['=', '+', '-', '@', "\t", "\r"], true)) {
+            return "\t" . $value;
+        }
+        return $value;
     }
 }
