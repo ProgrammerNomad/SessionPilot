@@ -17,8 +17,9 @@ class LogController
         $actionType = sanitize_text_field($request->get_param('action') ?? '');
         $severity   = sanitize_text_field($request->get_param('severity') ?? '');
         $since      = sanitize_text_field($request->get_param('since') ?? '');
+        $format     = sanitize_text_field($request->get_param('format') ?? '');
         $page       = max(1, (int) ($request->get_param('page') ?? 1));
-        $perPage    = 50;
+        $perPage    = ($format === 'csv') ? 10000 : 50;
 
         $where  = ['1=1'];
         $params = [];
@@ -58,10 +59,46 @@ class LogController
             ...array_merge($params, [$perPage, $offset])
         ), ARRAY_A);
 
+        if ($format === 'csv') {
+            return self::streamCsv($logs);
+        }
+
         return new WP_REST_Response([
             'data'  => $logs,
             'total' => $total,
             'page'  => $page,
         ], 200);
+    }
+
+    private static function streamCsv(array $rows): never
+    {
+        $filename = 'sessionpilot-logs-' . gmdate('Y-m-d') . '.csv';
+
+        header('Content-Type: text/csv; charset=utf-8');
+        header('Content-Disposition: attachment; filename="' . $filename . '"');
+        header('Cache-Control: no-cache, no-store, must-revalidate');
+        header('Pragma: no-cache');
+        header('Expires: 0');
+
+        $out = fopen('php://output', 'w');
+
+        // Header row
+        fputcsv($out, ['ID', 'Timestamp', 'User ID', 'Action', 'Description', 'IP', 'User Agent', 'Severity']);
+
+        foreach ($rows as $row) {
+            fputcsv($out, [
+                $row['id'],
+                $row['timestamp'],
+                $row['user_id'] ?? '',
+                $row['action_type'],
+                $row['description'] ?? '',
+                $row['ip'] ?? '',
+                $row['user_agent'] ?? '',
+                $row['severity'],
+            ]);
+        }
+
+        fclose($out);
+        exit;
     }
 }

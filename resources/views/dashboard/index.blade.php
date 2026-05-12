@@ -56,7 +56,7 @@
                 @forelse ($recentLogs as $log)
                     <tr>
                         <td>{{ esc_html($log['timestamp']) }}</td>
-                        <td>{{ $log['user_id'] ? esc_html(get_userdata($log['user_id'])?->user_login ?? $log['user_id']) : '—' }}</td>
+                        <td>{{ $log['user_id'] ? esc_html(get_userdata($log['user_id'])?->user_login ?? $log['user_id']) : '-' }}</td>
                         <td><span class="sp-badge sp-badge--action">{{ esc_html($log['action_type']) }}</span></td>
                         <td><span class="sp-badge sp-badge--{{ esc_attr($log['severity']) }}">{{ esc_html($log['severity']) }}</span></td>
                         <td>{{ esc_html($log['ip']) }}</td>

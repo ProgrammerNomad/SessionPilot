@@ -196,7 +196,7 @@ The MaxMind GeoLite2 database is **optional**. SessionPilot must function perfec
 
 **Behavior without GeoIP:**
 - `country` column stored as `NULL`
-- Admin UI shows `—` or `Unknown` for country fields
+- Admin UI shows `-` or `Unknown` for country fields
 - No errors, no warnings in logs
 
 ### 4. Event-Based Tracking -Authenticated Users Only

@@ -42,10 +42,10 @@
                 <template x-for="log in logs" :key="log.id">
                     <tr>
                         <td x-text="log.timestamp"></td>
-                        <td x-text="log.user_id || '—'"></td>
+                        <td x-text="log.user_id || '-'"></td>
                         <td><span class="sp-badge sp-badge--action" x-text="log.action_type"></span></td>
                         <td x-text="log.description"></td>
-                        <td x-text="log.ip || '—'"></td>
+                        <td x-text="log.ip || '-'"></td>
                         <td><span class="sp-badge" :class="`sp-badge--${log.severity}`" x-text="log.severity"></span></td>
                     </tr>
                 </template>

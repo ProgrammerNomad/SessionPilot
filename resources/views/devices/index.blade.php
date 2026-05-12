@@ -28,8 +28,8 @@
                         <td x-text="(d.browser || '') + (d.browser_version ? ' ' + d.browser_version : '')"></td>
                         <td x-text="d.os"></td>
                         <td x-text="d.device_type"></td>
-                        <td x-text="d.last_ip || '—'"></td>
-                        <td x-text="d.last_seen || '—'"></td>
+                        <td x-text="d.last_ip || '-'"></td>
+                        <td x-text="d.last_seen || '-'"></td>
                     </tr>
                 </template>
                 <template x-if="!loading && devices.length === 0">

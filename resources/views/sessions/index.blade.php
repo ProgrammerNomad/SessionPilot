@@ -44,8 +44,8 @@
                         <td x-text="s.browser + (s.browser_version ? ' ' + s.browser_version : '')"></td>
                         <td x-text="s.os"></td>
                         <td x-text="s.device_type"></td>
-                        <td x-text="s.ip_address || '—'"></td>
-                        <td x-text="s.last_activity ? timeAgo(s.last_activity) : '—'"></td>
+                        <td x-text="s.ip_address || '-'"></td>
+                        <td x-text="s.last_activity ? timeAgo(s.last_activity) : '-'"></td>
                         <td>
                             <span class="sp-badge" :class="s.is_active ? 'sp-badge--active' : 'sp-badge--inactive'"
                                   x-text="s.is_active ? 'Active' : 'Ended'"></span>

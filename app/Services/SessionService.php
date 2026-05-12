@@ -85,23 +85,46 @@ class SessionService
      */
     public function onHeartbeat(array $response, array $data): array
     {
+        // Only process our own tick flag
+        if ( empty($data['sp_session_tick']) ) {
+            return $response;
+        }
+
         if ( ! is_user_logged_in() ) {
+            $response['sp_force_logout'] = true;
+            $response['sp_logout_url']   = wp_login_url();
             return $response;
         }
 
         $userId = get_current_user_id();
         $token  = $this->getCurrentToken($userId);
 
-        if ($token) {
-            global $wpdb;
-            $wpdb->update(
-                $wpdb->prefix . 'sp_sessions',
-                ['last_activity' => current_time('mysql')],
-                ['user_id' => $userId, 'token' => $token],
-                ['%s'],
-                ['%d', '%s']
-            );
+        if ( ! $token ) {
+            return $response;
         }
+
+        global $wpdb;
+
+        // Check if this session was force-killed
+        $row = $wpdb->get_row($wpdb->prepare(
+            "SELECT logged_out_at FROM {$wpdb->prefix}sp_sessions WHERE user_id = %d AND token = %s",
+            $userId, $token
+        ));
+
+        if ( $row && $row->logged_out_at !== null ) {
+            $response['sp_force_logout'] = true;
+            $response['sp_logout_url']   = wp_login_url();
+            return $response;
+        }
+
+        // Session still active - refresh last_activity
+        $wpdb->update(
+            $wpdb->prefix . 'sp_sessions',
+            ['last_activity' => current_time('mysql')],
+            ['user_id' => $userId, 'token' => $token],
+            ['%s'],
+            ['%d', '%s']
+        );
 
         return $response;
     }

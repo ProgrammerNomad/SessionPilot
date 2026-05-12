@@ -204,7 +204,7 @@ These are separate, opt-in additions. They are **not loaded** unless explicitly 
 **Requirements:**
 - MaxMind GeoLite2 database downloaded and stored in `storage/geoip/`
 - Monthly refresh (MaxMind license requirement)
-- Plugin works fully without this module -country fields show `—` when absent
+- Plugin works fully without this module -country fields show `-` when absent
 
 ---
 
