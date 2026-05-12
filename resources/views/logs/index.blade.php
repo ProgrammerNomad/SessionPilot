@@ -37,16 +37,16 @@
             </thead>
             <tbody>
                 <template x-if="loading">
-                    <tr><td colspan="6" class="sp-empty">Loading…</td></tr>
+                    <tr><td colspan="6" class="sp-empty"><span class="spinner is-active" style="float:none;margin:0 6px 0 0;vertical-align:middle;"></span>Loading…</td></tr>
                 </template>
                 <template x-for="log in logs" :key="log.id">
                     <tr>
                         <td x-text="log.timestamp"></td>
                         <td x-text="log.user_id || '-'"></td>
-                        <td><span class="sp-badge sp-badge--action" x-text="log.action_type"></span></td>
+                        <td><span class="sp-badge sp-badge--action" x-text="formatAction(log.action_type)"></span></td>
                         <td x-text="log.description"></td>
                         <td x-text="log.ip || '-'"></td>
-                        <td><span class="sp-badge" :class="`sp-badge--${log.severity}`" x-text="log.severity"></span></td>
+                        <td><span class="sp-badge" :class="`sp-badge--${log.severity}`" x-text="log.severity.charAt(0).toUpperCase() + log.severity.slice(1)"></span></td>
                     </tr>
                 </template>
                 <template x-if="!loading && logs.length === 0">
@@ -93,6 +93,11 @@ function spLogs() {
 
         prevPage() { if (this.page > 1) { this.page--; this.fetchLogs(); } },
         nextPage() { if (this.page < this.totalPages) { this.page++; this.fetchLogs(); } },
+
+        formatAction(str) {
+            if (!str) return '';
+            return str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        },
     };
 }
 </script>

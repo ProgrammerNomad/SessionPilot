@@ -39,14 +39,21 @@
     background: #fff;
     border: 1px solid #dcdcde;
     border-radius: 6px;
-    padding: 20px 24px;
+    padding: 14px 18px;
 }
 
 .sp-widget--warning { border-left: 4px solid #d63638; }
 .sp-widget--neutral { border-left: 4px solid #dcdcde; }
 
+.sp-widget-icon {
+    font-size: 1.3rem;
+    color: #787c82;
+    margin-bottom: 6px;
+    display: block;
+}
+
 .sp-widget-value {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #1d2327;
     line-height: 1;
@@ -234,6 +241,9 @@
 .sp-btn--danger    { background: #d63638; color: #fff; border-color: #d63638; }
 .sp-btn--danger:hover { background: #b32d2e; }
 
+.sp-btn--destructive { background: #f0f0f1; color: #d63638; border-color: #d63638; }
+.sp-btn--destructive:hover { background: #fde8e8; }
+
 .sp-btn--sm { padding: 4px 10px; font-size: 0.8rem; }
 
 /* ---- Link ---- */
@@ -262,7 +272,81 @@
 
 /* ---- Settings max-width (replaces inline style) ---- */
 .sp-card--settings {
-    max-width: 640px;
+    max-width: 800px;
+}
+
+/* ---- Modal ---- */
+[x-cloak] { display: none !important; }
+
+.sp-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.sp-modal {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.sp-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #dcdcde;
+}
+
+.sp-modal-header h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #1d2327;
+}
+
+.sp-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #787c82;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.sp-modal-close:hover { color: #1d2327; }
+
+.sp-modal-body {
+    padding: 20px;
+}
+
+.sp-modal-dl {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 10px 16px;
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.sp-modal-dl dt {
+    font-weight: 600;
+    color: #50575e;
+}
+
+.sp-modal-dl dd {
+    margin: 0;
+    color: #1d2327;
+    word-break: break-all;
 }
 
 /* ---- Responsive: stack toolbar on small screens ---- */

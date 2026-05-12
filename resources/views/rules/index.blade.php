@@ -26,20 +26,29 @@
                 <input type="number" x-model.number="form.user_id" min="1" class="sp-input sp-input--sm" placeholder="WordPress user ID" />
             </div>
             <div class="sp-form-row">
-                <label>Max sessions <small>(0 = unlimited)</small></label>
-                <input type="number" x-model.number="form.max_sessions" min="0" class="sp-input sp-input--sm" />
+                <label>Max sessions</label>
+                <div>
+                    <input type="number" x-model.number="form.max_sessions" min="0" class="sp-input sp-input--sm" />
+                    <p class="description">Maximum simultaneous sessions allowed for this role. Set to 0 for unlimited.</p>
+                </div>
             </div>
             <div class="sp-form-row">
                 <label>When limit exceeded</label>
-                <select x-model="form.enforcement_mode" class="sp-select">
-                    <option value="logout_oldest">Logout oldest session</option>
-                    <option value="block_new">Block new login</option>
-                    <option value="logout_all">Logout all sessions</option>
-                </select>
+                <div>
+                    <select x-model="form.enforcement_mode" class="sp-select">
+                        <option value="logout_oldest">Logout oldest session</option>
+                        <option value="block_new">Block new login</option>
+                        <option value="logout_all">Logout all sessions</option>
+                    </select>
+                    <p class="description">What happens when a user exceeds the session limit.</p>
+                </div>
             </div>
             <div class="sp-form-row">
-                <label>Idle timeout (seconds) <small>(0 = disabled)</small></label>
-                <input type="number" x-model.number="form.idle_timeout_seconds" min="0" class="sp-input sp-input--sm" />
+                <label>Idle timeout (seconds)</label>
+                <div>
+                    <input type="number" x-model.number="form.idle_timeout_seconds" min="0" class="sp-input sp-input--sm" />
+                    <p class="description">Automatically ends the session after this many seconds of inactivity. Set to 0 to disable.</p>
+                </div>
             </div>
             <div class="sp-form-actions">
                 <button type="submit" class="sp-btn sp-btn--primary" :disabled="saving">Save Rule</button>

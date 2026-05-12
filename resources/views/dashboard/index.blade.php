@@ -18,18 +18,21 @@
     {{-- Stat widgets --}}
     <div class="sp-widgets">
         <div class="sp-widget">
+            <span class="dashicons dashicons-admin-users sp-widget-icon"></span>
             <div class="sp-widget-value">{{ $onlineCount }}</div>
             <div class="sp-widget-label">Online Users</div>
             <div class="sp-widget-sub">Active in last 5 minutes</div>
         </div>
 
         <div class="sp-widget">
+            <span class="dashicons dashicons-shield sp-widget-icon"></span>
             <div class="sp-widget-value">{{ $activeCount }}</div>
             <div class="sp-widget-label">Active Sessions</div>
             <div class="sp-widget-sub">All non-expired sessions</div>
         </div>
 
         <div class="sp-widget sp-widget--{{ $failedLogins >= 5 ? 'warning' : 'neutral' }}">
+            <span class="dashicons dashicons-warning sp-widget-icon"></span>
             <div class="sp-widget-value">{{ $failedLogins }}</div>
             <div class="sp-widget-label">Failed Logins</div>
             <div class="sp-widget-sub">Last 24 hours</div>
@@ -57,8 +60,8 @@
                     <tr>
                         <td>{{ esc_html($log['timestamp']) }}</td>
                         <td>{{ $log['user_id'] ? esc_html(get_userdata($log['user_id'])?->user_login ?? $log['user_id']) : '-' }}</td>
-                        <td><span class="sp-badge sp-badge--action">{{ esc_html($log['action_type']) }}</span></td>
-                        <td><span class="sp-badge sp-badge--{{ esc_attr($log['severity']) }}">{{ esc_html($log['severity']) }}</span></td>
+                        <td><span class="sp-badge sp-badge--action">{{ esc_html(ucwords(str_replace('_', ' ', $log['action_type']))) }}</span></td>
+                        <td><span class="sp-badge sp-badge--{{ esc_attr($log['severity']) }}">{{ esc_html(ucfirst($log['severity'])) }}</span></td>
                         <td>{{ esc_html($log['ip']) }}</td>
                     </tr>
                 @empty
