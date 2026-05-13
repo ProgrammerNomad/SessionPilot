@@ -45,7 +45,56 @@ if ( ! defined( 'ACORN_BASEPATH' ) ) {
     define( 'ACORN_BASEPATH', SESSIONPILOT_PLUGIN_DIR );
 }
 
+// Plugins list page: action links (left column — next to Deactivate)
+add_filter( 'plugin_action_links_' . SESSIONPILOT_PLUGIN_BASENAME, function ( array $links ): array {
+    $action_links = [
+        'settings' => sprintf(
+            '<a href="%s">%s</a>',
+            esc_url( admin_url( 'admin.php?page=sessionpilot-settings' ) ),
+            esc_html__( 'Settings', 'sessionpilot' )
+        ),
+        'dashboard' => sprintf(
+            '<a href="%s">%s</a>',
+            esc_url( admin_url( 'admin.php?page=sessionpilot' ) ),
+            esc_html__( 'Dashboard', 'sessionpilot' )
+        ),
+    ];
+
+    return array_merge( $action_links, $links );
+} );
+
+// Plugins list page: row meta links (right column — next to Version)
+add_filter( 'plugin_row_meta', function ( array $meta, string $file ): array {
+    if ( SESSIONPILOT_PLUGIN_BASENAME !== $file ) {
+        return $meta;
+    }
+
+    $meta[] = sprintf(
+        '<a href="%s" target="_blank" rel="noopener noreferrer">%s</a>',
+        esc_url( 'https://github.com/ProgrammerNomad/SessionPilot' ),
+        esc_html__( 'GitHub', 'sessionpilot' )
+    );
+
+    $meta[] = sprintf(
+        '<a href="%s" target="_blank" rel="noopener noreferrer">%s</a>',
+        esc_url( 'https://github.com/ProgrammerNomad/SessionPilot/issues' ),
+        esc_html__( 'Report a Bug', 'sessionpilot' )
+    );
+
+    $meta[] = sprintf(
+        '<a href="%s" target="_blank" rel="noopener noreferrer">%s</a>',
+        esc_url( 'https://github.com/ProgrammerNomad/SessionPilot/blob/main/docs/README.md' ),
+        esc_html__( 'Documentation', 'sessionpilot' )
+    );
+
+    return $meta;
+}, 10, 2 );
+
 // Boot Acorn on after_setup_theme (standard Acorn boot hook)
+// Explicitly register our ServiceProvider via callback so it works even when
+// Acorn's PackageManifest cannot auto-discover it (e.g. composer.json absent).
 add_action( 'after_setup_theme', function () {
-    \Roots\bootloader()->boot();
+    \Roots\bootloader()->boot( function ( $app ) {
+        $app->register( \ProgrammerNomad\SessionPilot\Providers\SessionPilotServiceProvider::class );
+    } );
 }, 1 );

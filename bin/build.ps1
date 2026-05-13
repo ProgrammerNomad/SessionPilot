@@ -90,7 +90,8 @@ if (Test-Path $langSrc) {
 # ---------------------------------------------------------------------------
 # Step 4: Install production Composer dependencies in staging
 # ---------------------------------------------------------------------------
-Write-Host "`n[4/5] Installing production Composer dependencies..."
+# Install production dependencies only into staging.
+Write-Host "[4/5] Installing production Composer dependencies..."
 Push-Location $stagingRoot
 try {
     composer install --no-dev --prefer-dist --optimize-autoloader --no-interaction --no-progress
@@ -99,11 +100,10 @@ finally {
     Pop-Location
 }
 
-# Remove lock file and composer.json from final distributable
-foreach ($f in @("composer.lock", "composer.json")) {
-    $target = Join-Path $stagingRoot $f
-    if (Test-Path $target) { Remove-Item $target -Force }
-}
+# Remove only the lock file — composer.json must stay so Acorn's PackageManifest
+# can discover SessionPilotServiceProvider when the plugin is active in WordPress.
+$stagingLock = Join-Path $stagingRoot "composer.lock"
+if (Test-Path $stagingLock) { Remove-Item $stagingLock -Force }
 
 # Clear bootstrap/cache/ — must exist but be empty (Acorn writes here at runtime)
 $cacheDir = Join-Path $stagingRoot "bootstrap\cache"
